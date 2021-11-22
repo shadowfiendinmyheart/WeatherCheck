@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { API_URL } from '../constants/constants';
 
 export const useHttp = () => {
     const [loading, setLoading] = useState(null);
@@ -10,7 +11,7 @@ export const useHttp = () => {
     ) => {
         try {
             setLoading(true);
-            const res = await fetch(url, options);
+            const res = await fetch(API_URL + url, options);
             if (!res.ok) {
                 throw new Error('Произошёл сбой на сервере');
             }
