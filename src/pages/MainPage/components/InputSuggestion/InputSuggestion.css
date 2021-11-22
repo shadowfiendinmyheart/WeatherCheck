@@ -1,0 +1,33 @@
+.input-suggestion {
+    width: 510px;
+    height: 59px;
+    background: #30354B;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 20px;
+    margin-top: -4px;
+
+    font-family: SF Pro Display Regular;
+    font-size: 16px;
+    line-height: 19px;
+
+    cursor: pointer;
+}
+
+.input-suggestion:hover {
+    background: #373d57;
+}
+
+.input-suggestion__entered-text {
+    color: #FFFFFF;
+}
+
+.input-suggestion__suggestion-text {
+    color: #8A91AB;
+}
+
+@media screen and (max-width: 920px) {
+    .input-suggestion {
+        width: 335px;
+    }
+}

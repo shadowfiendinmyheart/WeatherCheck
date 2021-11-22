@@ -1,0 +1,20 @@
+.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    background: rgba(42, 47, 69, 1);
+    height: 65px;
+    width: 100vw;
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 920px) {
+    .header {
+        background: rgba(42, 47, 69, 0);
+    }
+}

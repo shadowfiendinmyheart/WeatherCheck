@@ -1,0 +1,55 @@
+.city-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 270px;
+    height: 190px;
+
+    background: rgba(41, 46, 68, 0.5);
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.city-card__name {
+    margin-top: 23px;
+
+    font-family: SF Pro Display Regular;
+    font-size: 14px;
+    line-height: 110.7%;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.city-card__degree {
+    margin-top: 12px;
+
+    font-family: SF Pro Display Regular;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 110.7%;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.city-card__logo {
+    position: relative;
+    height: 78px;
+    width: 78px;
+}
+
+.logo-position {
+    position: absolute;
+    top: 2px;
+    left: -4px;
+    right: 3px;
+}
+
+@media screen and (max-width: 920px) {
+    .city-card {
+        width: 158px;
+    }
+}

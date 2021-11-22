@@ -1,0 +1,26 @@
+.input {
+    width: 510px;
+    height: 56px;
+    background: #2A2F45;
+    border-radius: 2px;
+    border: none;
+    padding: 18px 20px;
+
+    font-family: SF Pro Display Regular;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 19px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.input:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 920px) {
+    .input {
+        width: 335px;
+    }
+}

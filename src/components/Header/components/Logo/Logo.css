@@ -1,0 +1,31 @@
+.logo {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    gap: 12px;
+    height: 100%;
+    width: 197px;
+}
+
+.logo__image {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+
+    margin-left: 23px;
+}
+
+.logo__header {
+    font-family: SF Pro Display Regular;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.5px;
+    color: #FFFFFF;
+}
+
+.logo__image_position {
+    position: absolute;
+    top: -17.5px;
+    right: -37px;
+}
