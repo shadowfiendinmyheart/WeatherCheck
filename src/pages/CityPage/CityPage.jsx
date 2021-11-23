@@ -77,7 +77,7 @@ const CityPage = () => {
     }
 
     return (
-        <ErrorHandler isError={error}>
+        // <ErrorHandler isError={error}>
             <div className='city-page'>
                 <div className='buttons'>
                     <Link to='/' className='link'>
@@ -113,7 +113,7 @@ const CityPage = () => {
                     </>)
                 }
             </div>
-        </ErrorHandler>
+        // </ErrorHandler>
     )
 }
 
