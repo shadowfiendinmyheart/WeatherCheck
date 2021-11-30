@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SvgSprite from '../../../../components/SvgSprite/SvgSprite';
+import Icon from '../../../../components/Icon/Icon';
 
 import './Bookmark.css';
 
@@ -8,9 +8,9 @@ const Bookmark = ({ isFavorite, onClick }) => {
     return (
         <div className='bookmark' onClick={onClick}>
             {isFavorite ? (
-                <SvgSprite name='bookmark-use' size={'24'}/>
+                <Icon name='bookmarkUse' size={'24'}/>
             ) : (
-                <SvgSprite name='bookmark' size={'24'}/>
+                <Icon name='bookmark' size={'24'}/>
             )}
         </div>
     )

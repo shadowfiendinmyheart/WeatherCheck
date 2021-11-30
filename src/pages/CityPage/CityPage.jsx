@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-import SvgSprite from '../../components/SvgSprite/SvgSprite';
+import Icon from '../../components/Icon/Icon';
 import Bookmark from './components/Bookmark/Bookmark';
 import BackButton from './components/BackButton/BackButton';
 import Loader from '../../components/Loader/Loader';
@@ -9,6 +9,7 @@ import WeatherDegree from '../../components/WeatherDegree/WeatherDegree';
 import ErrorHandler from '../../components/ErrorHandler/ErrorHandler';
 
 import { useHttp } from '../../hooks/http.hook';
+import { useMobile } from '../../hooks/mobile.hook';
 
 import './CityPage.css';
 
@@ -27,6 +28,7 @@ const CityPage = () => {
 
     const { search } = useLocation();
     const { request, loading, error } = useHttp();
+    const { isMobile } = useMobile();
 
     useEffect(() => {
         const params = new URLSearchParams(search);
@@ -77,7 +79,7 @@ const CityPage = () => {
     }
 
     return (
-        // <ErrorHandler isError={error}>
+        <ErrorHandler isError={error}>
             <div className='city-page'>
                 <div className='buttons'>
                     <Link to='/' className='link'>
@@ -93,27 +95,29 @@ const CityPage = () => {
                     <>
                         <div className='city-page__heading'>
                             <h2 className='heading__name-city'>{cityName}</h2>
-                            <span className='heading__weather-name'>{weatherText}</span>
+                            <span className='heading__weather-name'>{"Облачно с прояснениями"}</span>
                         </div>
                         <div className='city-page__main-weather'>
-                            <WeatherDegree degree={degree} />
+                            <WeatherDegree degree={"-13°"} />
                             <div className='main-weather__icon'>
-                                <SvgSprite name={weatherLogo} />
+                                <Icon name={'thunderstorm'} size={isMobile ? 162 : 187} />
                             </div>
                         </div>
                         <div className='city-page__additional-weather'>
-                            <div className='additional-weather__atmosphere-pressure'>
-                                <SvgSprite name={'barometer'} size={'24'} />
-                                <span className='additional-weather__atmosphere-pressure__text'>{pressure} мм рт. ст.</span>
+                            <div className='atmosphere-pressure'>
+                                <div className='atmosphere-pressure__logo'>
+                                    <Icon name={'barometer'} size={'24'} />
+                                </div>
+                                <span className='atmosphere-pressure__text'>{"756"} мм рт. ст.</span>
                             </div>
                             <div className='additional-weather__sunset'>
-                                Закат в {sunset}
+                                Закат в {"18:00"}
                             </div>
                         </div>
                     </>)
                 }
             </div>
-        // </ErrorHandler>
+        </ErrorHandler>
     )
 }
 

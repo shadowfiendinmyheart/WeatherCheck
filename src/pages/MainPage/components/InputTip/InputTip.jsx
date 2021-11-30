@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SvgSprite from '../../../../components/SvgSprite/SvgSprite';
+import Icon from '../../../../components/Icon/Icon';
 
 import './InputTip.css';
 
@@ -11,7 +11,7 @@ const InputTip = () => {
                 Начните вводить город,<br /> например, <span className='input-tip__text__example'>Ижевск</span>
             </p>
             <div className='input-tip__arrow'>
-                <SvgSprite name='arrow-tip' />
+                <Icon name='arrowTip' size={38} />
             </div>
         </div>
     )

@@ -5,19 +5,10 @@
     line-height: 110.7%;
     letter-spacing: 3px;
 
+
     background: linear-gradient(180deg, #FFFFFF 11.65%, rgba(255, 255, 255, 0) 139.47%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.back-link {
-    font-family: SF Pro Display Regular;
-    font-size: 16px;
-    line-height: 110.7%;
-
-    color: #FFFFFF;
-    
-    text-decoration: none;
 }
 
 @media screen and (max-width: 920px) {

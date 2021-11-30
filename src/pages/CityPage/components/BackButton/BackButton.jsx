@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SvgSprite from '../../../../components/SvgSprite/SvgSprite';
+import Icon from '../../../../components/Icon/Icon';
 import { useMobile } from '../../../../hooks/mobile.hook';
 
 import './BackButton.css'
@@ -10,7 +10,7 @@ const BackButton = () => {
 
     return (
         <div className='back-button'>
-            <SvgSprite name='arrow-back' size={'24'} />
+            <Icon name='arrowBack' size={'24'} />
             {!isMobile && <span className='back-button__text'>Назад</span>}
         </div>
     )

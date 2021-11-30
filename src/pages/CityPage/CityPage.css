@@ -36,16 +36,18 @@
 }
 
 .city-page__heading {
-    margin-top: 24px;
+    margin: 24.5px 0 0 1px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 17px;
+    gap: 16px;
 }
 
 .heading__name-city {
+    margin-left: 1px;
+
     font-family: SF Pro Display Regular;
     font-weight: 500;
     font-size: 56px;
@@ -64,48 +66,51 @@
 }
 
 .city-page__main-weather {
-    margin-top: 16px;
+    margin-top: 17px;
 
     display: flex;
     align-items: center;
-    gap: 10px;
-}
-
-.main-weather__degrees {
-    font-family: SF Pro Display Regular;
-    font-weight: 600;
-    font-size: 129.755px;
-    line-height: 110.7%;
-    letter-spacing: 3px;
-
-    background: linear-gradient(180deg, #FFFFFF 11.65%, rgba(255, 255, 255, 0) 139.47%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .main-weather__icon {
     display: block;
     height: 191px;
     width: 191px;
+
+    position: relative;
+    top: -4px;
+    left: 9px;
 }
 
 .city-page__additional-weather {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
+    gap: 28px;
 
-    margin-top: 44px;
+    margin-top: 40px;
 }
 
-.additional-weather__atmosphere-pressure {
+.atmosphere-pressure {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 9px;
 }
 
-.additional-weather__atmosphere-pressure__text {
+.atmosphere-pressure__logo {
+    position: relative;
+    top: -1px;
+    right: -1px;
+}
+
+.atmosphere-pressure__logo_position {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+}
+
+.atmosphere-pressure__text {
     font-family: SF Pro Display Regular;
     font-size: 16px;
     line-height: 19px;
@@ -135,14 +140,22 @@
 
     .city-page__heading {
         margin-top: 25px;
-        gap: 12px;
+        gap: 13px;
     }
 
+    
     .heading__name-city {
+        margin-left: 0px;
+        letter-spacing: 0.5px;
         font-size: 24px;
     }
 
+    .heading__weather-name {
+        font-size: 14px;
+    }
+
     .city-page__main-weather {
+        margin-top: 18px;
         flex-direction: column;
     }
 
@@ -150,24 +163,27 @@
         gap: 0;
     }
 
-    .main-weather__degrees {
-        font-size: 120px;
-    }
-
     .main-weather__icon {
-        margin: -27px 0 0 -10px;
+        margin: -27px 0 0 14px;
         display: block;
         height: 162px;
         width: 162px;
+
+        top: 0;
+        left: 0;
     }
 
     .city-page__additional-weather {
-        margin-top: 31px;
-        gap: 37px;
+        margin-top: 28px;
+        gap: 36px;
     }
 
-    .additional-weather__atmosphere-pressure__text {
+    .atmosphere-pressure__text {
         font-size: 14px;
+    }
+
+    .atmosphere-pressure__logo {
+        top: 1px;
     }
 
     .additional-weather__sunset {

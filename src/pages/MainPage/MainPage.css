@@ -32,16 +32,22 @@
 }
 
 .main-page__bookmark-tip {
-    margin-top: 90px;
+    margin-top: 88px;
 }
 
 .city-grid {
-    margin-top: 55px;
+    margin: 55px 0 97px 0;
+    padding-left: 8px;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 35px;
     grid-row-gap: 30px;
+}
+
+.city-grid__element:nth-child(3n+3) {
+    position: relative;
+    right: 8px;
 }
 
 .link {
@@ -55,15 +61,21 @@
 
 @media screen and (max-width: 920px) {
     .input-city {
-        margin-top: 84px;
+        margin-top: 85px;
     }
 
     .city-grid {
-        margin-top: 35px;
+        margin-top: 33px;
+        padding-left: 0px;
 
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 19px;
         grid-row-gap: 20px;
+    }
+
+    .city-grid__element:nth-child(3n+3) {
+        position: relative;
+        right: 0px;
     }
 
     .main-page__input-tip {

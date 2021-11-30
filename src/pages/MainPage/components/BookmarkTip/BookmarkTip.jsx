@@ -1,5 +1,5 @@
 import React from 'react';
-import SvgSprite from '../../../../components/SvgSprite/SvgSprite';
+import Icon from '../../../../components/Icon/Icon';
 
 import './BookmarkTip.css';
 
@@ -11,7 +11,7 @@ const BookmarkTip = () => {
                 чтобы закрепить город на главной
             </p>
             <div className='bookmark-tip__logo'>
-                <SvgSprite name='bookmark' size={'40'} />
+                <Icon name='bookmark' size={40} />
             </div>
         </div>
     )

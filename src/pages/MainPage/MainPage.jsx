@@ -84,13 +84,15 @@ const MainPage = () => {
                         <div className='city-grid'>
                             {favCities.map(city => {
                                 return (
-                                    <Link to={`/city?name=${city.name}`} className='link' key={city.engName}>
-                                        <CityCard
-                                            name={city.name}
-                                            degree={city.degree}
-                                            logo={city.weather}
-                                        />
-                                    </Link>
+                                    <div key={city.name} className='city-grid__element'>
+                                        <Link to={`/city?name=${city.name}`} className='link' key={city.engName}>
+                                            <CityCard
+                                                name={city.name}
+                                                degree={city.degree}
+                                                logo={city.weather}
+                                            />
+                                        </Link>
+                                    </div>
                                 )
                             })}
                         </div>

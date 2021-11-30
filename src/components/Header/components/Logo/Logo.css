@@ -1,7 +1,6 @@
 .logo {
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     gap: 12px;
     height: 100%;
     width: 197px;
@@ -26,6 +25,20 @@
 
 .logo__image_position {
     position: absolute;
-    top: -17.5px;
-    right: -37px;
+    top: -18.5px;
+    right: -36px;
+}
+
+@media screen and (max-width: 920px) {
+    .logo {
+        gap: 13px;
+    }
+
+    .logo__image {
+        margin-left: 19px;
+    }
+
+    .logo__header {
+        letter-spacing: 0.7px;
+    }
 }

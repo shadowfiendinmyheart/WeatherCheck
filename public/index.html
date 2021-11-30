@@ -11,6 +11,8 @@
     />
     <link rel="apple-touch-icon" href="./logo192.png" />
     <link rel="manifest" href="./manifest.json" />
+    <!-- https://stackoverflow.com/questions/27752494/why-cant-i-reference-an-svg-linear-gradient-defined-in-an-external-file-paint -->
+    <script>var ajax = new XMLHttpRequest; ajax.open("GET", "./sprite.svg", !0), ajax.send(), ajax.onload = function (a) { var b = document.createElement("div"); b.style.height = "0"; b.style.width = "0"; b.style.position = "absolute"; b.style.visibility = "hidden", b.innerHTML = ajax.responseText, document.body.insertBefore(b, document.body.childNodes[0]) };</script>
     <title>Weather Check</title>
   </head>
   <body>
