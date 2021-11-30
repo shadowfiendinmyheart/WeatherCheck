@@ -95,12 +95,12 @@ const CityPage = () => {
                     <>
                         <div className='city-page__heading'>
                             <h2 className='heading__name-city'>{cityName}</h2>
-                            <span className='heading__weather-name'>{"Облачно с прояснениями"}</span>
+                            <span className='heading__weather-name'>{weatherText}</span>
                         </div>
                         <div className='city-page__main-weather'>
-                            <WeatherDegree degree={"-13°"} />
+                            <WeatherDegree degree={degree} />
                             <div className='main-weather__icon'>
-                                <Icon name={'thunderstorm'} size={isMobile ? 162 : 187} />
+                                <Icon name={weatherLogo} size={isMobile ? 162 : 187} />
                             </div>
                         </div>
                         <div className='city-page__additional-weather'>
@@ -108,10 +108,10 @@ const CityPage = () => {
                                 <div className='atmosphere-pressure__logo'>
                                     <Icon name={'barometer'} size={'24'} />
                                 </div>
-                                <span className='atmosphere-pressure__text'>{"756"} мм рт. ст.</span>
+                                <span className='atmosphere-pressure__text'>{pressure} мм рт. ст.</span>
                             </div>
                             <div className='additional-weather__sunset'>
-                                Закат в {"18:00"}
+                                Закат в {sunset}
                             </div>
                         </div>
                     </>)
